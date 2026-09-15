@@ -1,0 +1,8 @@
+say "hello"
+wait "0.5"
+say "hi Roman"
+var Username = 0
+ask "what is your name" to Username
+say "hello"
+say Username
+RUN_CODE
