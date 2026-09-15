@@ -9,3 +9,8 @@ say YourVar will print the Variable.
 ## time manipulation (time)
 Now wait "1" will wait 1 second and so on.
 Well there wlil be more time stuff in a future update.
+## Errors
+This one is basic
+Put a space befor the quotes. On line 1 ERROR
+ERROR COMMAND NOT FOUND
+Those are the only one here for now.
