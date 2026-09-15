@@ -6,4 +6,6 @@ You use RUN_CODE to run the code (all caps)
 Var YourVar = value2 with your variable name will make a variable.
 ask "something" to YourVar will set the variable to the input.
 say YourVar will print the Variable.
-
+## time manipulation (time)
+Now wait "1" will wait 1 second and so on.
+Well there wlil be more time stuff in a future update.
