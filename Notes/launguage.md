@@ -14,3 +14,6 @@ This one is basic
 Put a space befor the quotes. On line 1 ERROR
 ERROR COMMAND NOT FOUND
 Those are the only one here for now.
+## File Read and Run
+so if you use READ_AND_RUN_FILE_(your path ending in \example.wsc)
+it will let you run that file! That's it.
