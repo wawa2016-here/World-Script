@@ -1,0 +1,9 @@
+say "hello I'm here"
+saay "this is an error"
+say"you should not see this"
+say "newline"
+var Name = 0
+ask "Name" to Name
+say Name
+READ_AND_RUN_FILE_test.wsc
+RUN_CODE
