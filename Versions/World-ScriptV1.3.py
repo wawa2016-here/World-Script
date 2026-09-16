@@ -1,6 +1,7 @@
 import time
 import threading
 import sys
+import os
 
 allCode = []
 totalItems = 0
@@ -29,8 +30,6 @@ def Run():
             i += 1
             continue
 
-        if line.startswith('RUN_CODE'):
-            continue
         if line.startswith('var '):
             parts = line[4:].split('=', 1)
             if len(parts) == 2:
@@ -99,7 +98,15 @@ def Run():
             print(f"Put a space before the quotes. On line {i+1} ERROR")
 
         elif line.startswith('READ_AND_RUN_FILE_'):
-            filename = line[18:].strip()
+            filename = line[18:].strip().strip('"').strip("'")
+            
+            if not os.path.isabs(filename):
+                if len(sys.argv) > 1:
+                    base_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+                    filename = os.path.join(base_dir, filename)
+                else:
+                    filename = os.path.abspath(filename)
+
             try:
                 with open(filename, "r", encoding="utf-8") as f:
                     file_lines = [l.strip() for l in f.readlines()]
